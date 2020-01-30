@@ -23,7 +23,6 @@
 </head>
 
 <body>
-  <script src="https://github.com/ljnicol/coronavirus_viz/raw/master/coronavirus.geojson"></script>
   <div id="map"></div>
 
 
@@ -37,7 +36,7 @@
     map.on('load', function () {
       map.addSource('points', {
         'type': 'geojson',
-        'data': data,
+        'data': 'https://github.com/ljnicol/coronavirus_viz/raw/master/coronavirus.geojson',
         cluster: true,
         clusterMaxZoom: 14, // Max zoom to cluster points on
         clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
